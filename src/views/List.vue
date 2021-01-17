@@ -35,7 +35,9 @@
           <td class="td">
             <div class="text">{{ task.description }}</div>
           </td>
-          <td>{{ task.status }}</td>
+          <td v-if="task.status === 'active'" style="color: green">{{ task.status }}</td>
+          <td v-else-if="task.status === 'outdated'" style="color: blue">{{ task.status }}</td>
+          <td v-else-if="task.status === 'completed'" style="color: red">{{ task.status }}</td>
           <td>
             <router-link
               tag="button"
