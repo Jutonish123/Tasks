@@ -16,7 +16,7 @@
 
     <hr>
 
-    <table v-if="tasks.length">
+    <table class="striped" v-if="tasks.length">
       <thead>
         <tr>
           <th>#</th>
@@ -41,7 +41,7 @@
           <td>
             <router-link
               tag="button"
-              class="btn btn-small"
+              class="btn btn-small pulse"
               :to="'/task/' + task.id"
               >Open</router-link
             >
